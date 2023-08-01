@@ -1,0 +1,12 @@
+click on the hyperlink on home.html -> Controller (/drink/display) ->display.html
+
+click on the hyperlink on displayDrink.html -> Controller (/drink/addForm) ->addDrink.html
+
+Enter the values and submit -> /drink/add -> displayDrink.html
+
+
+click on the hyperlink on displayDrink.html -> Controller (/drink/editForm) ->editDrink.html 
+
+Enter the values and submit -> /drink/edit -> displayDrink.html
+
+

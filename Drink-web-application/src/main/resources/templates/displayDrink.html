@@ -1,0 +1,29 @@
+<!Doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Display Drink Page</title>
+</head>
+<body>
+
+	<h1>Drinks Menu</h1><br>
+	<div th:text="${msg}">  </div><br>
+	<table border="2" width="70%" cellpadding="2">
+		<tr>
+			<th>Id</th>
+			<th>Drink Name</th>
+			<th>Drink Type</th>
+			<th>Edit</th>
+		</tr>
+		<tr th:each="drink: ${drinks}">
+				<td th:text="${drink.id}"></td>
+				<td th:text="${drink.name}"></td>
+				<td th:text="${drink.type}"></td>
+				<td><a th:href= "@{'/drink/editForm/' + ${drink.id}}">Edit</a></td>
+			</tr>
+		</th:forEach>
+	</table>
+	<br />
+	<a th:href="@{/drink/addForm}">Add a Drink</a>
+</body>
+</html>

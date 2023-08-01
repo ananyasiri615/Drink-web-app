@@ -1,0 +1,29 @@
+<!Doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add Drink Page</title>
+</head>
+<body>
+	<form th:action="@{/drink/add}" th:object="${drink}" th:method="POST">
+		<h1>Add Drink</h1>
+		<br>
+		<table border="2" width="70%" cellpadding="2">
+			<tr>
+				<td>Drink Name</td>
+				<td><input type="text" th:name="name"></td>
+			</tr>
+			<tr>
+				<td>Drink Type</td>
+				<td><input type="text" th:name="type"></td>
+			</tr>
+			<tr>
+				<td>Is Drink Alcoholic</td>
+				<td><input type="checkbox" th:name="alcoholic"></td>
+			</tr>
+
+		</table>
+		<br /> <input type="submit" value="Add Drink">
+	</form>
+</body>
+</html>
